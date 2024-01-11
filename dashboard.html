@@ -1,0 +1,78 @@
+<!--To-do list-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="style.css" >
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <form class="input-group mb-3" id="form">
+                <!-- <input id="input" type="text" class="form-control" placeholder="Add a new task"> -->
+            </form>
+            <h1>Customer List</h1>
+        </header>
+        <button id="myBtn" class="btn btn-outline-success" >Add Customer</button>
+
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+          <h2>Customer Details</h2>
+            <div class="login-container">
+              <div class="container">
+              <div class="row justify-content-evenly">
+                <div class="col-6">
+                  <input type="text" id="first_name" name="username" placeholder="First name" requires>
+                  <input type="text" id="last_name" name="username" placeholder="Last name" requires>
+                  <input type="text" id="street" name="username" placeholder="Street" requires>
+                  <input type="text" id="address" name="username" placeholder="Address" requires>
+                </div>
+                <div class="col-6">
+                  <input type="text" id="city" name="username" placeholder="City" requires>
+                  <input type="text" id="state" name="username" placeholder="State" requires>
+                  <input type="text" id="email" name="username" placeholder="Email" requires>
+                  <input type="text" id="phone" name="username" placeholder="Phone" requires>
+                </div>               
+              </div>
+              <div class="row justify-content-end">
+                <button id="add_btn" type="submit">Submit</button>
+              </div>
+            </div>
+          </div>
+          </div>
+        
+        </div>
+        <main>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">City</th>
+                  <th scope="col">State</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Phone</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="task_list"></tbody>
+            </table>
+        </main>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
